@@ -22,7 +22,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} text-lg`}
+                className={`${navigationMenuTriggerStyle()} text-xl`}
               >
                 Home
               </NavigationMenuLink>
@@ -31,7 +31,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} text-lg`}
+                className={`${navigationMenuTriggerStyle()} text-xl`}
               >
                 About
               </NavigationMenuLink>
@@ -40,7 +40,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <Link href="/projects" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} text-lg`}
+                className={`${navigationMenuTriggerStyle()} text-xl`}
               >
                 Projects
               </NavigationMenuLink>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <Link href="/people" legacyBehavior passHref>
               <NavigationMenuLink
-                className={`${navigationMenuTriggerStyle()} text-lg`}
+                className={`${navigationMenuTriggerStyle()} text-xl`}
               >
                 People
               </NavigationMenuLink>
