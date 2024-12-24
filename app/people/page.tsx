@@ -1,562 +1,118 @@
-import { Card } from "@/components/ui/card";
-import Image from "next/image";
-import { FaGithub, FaInstagram } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { Button } from "@/components/ui/button";
-import { FaLinkedin } from "react-icons/fa";
+import TeamMemberCard from "@/components/TeamMemberCard";
 
-export default function people() {
-    return (
-        <div>
-            <div className="flex text-4xl font-semibold items-center justify-center">Leadership Team</div>
-            <div className="mt-6"><p className="flex text-lg font-medium items-center justify-center text-gray-500 text-center">"Our leadership team combines experience, passion, and fresh ideas to inspire, innovate, and drive our mission forward. <br />
-                Meet the amazing people behind our journey!"</p></div>
+const teamData = {
+  "Leadership Team": [
+    {
+      imageSrc: "/path/to/image1.jpg",
+      name: "Team Member 1",
+      designation: "CEO",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "team1@example.com",
+      },
+    },
+    {
+      imageSrc: "/path/to/image2.jpg",
+      name: "Team Member 2",
+      designation: "CTO",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "team2@example.com",
+      },
+    },
+  ],
+  "AI / ML Team": [
+    {
+      imageSrc: "/path/to/image3.jpg",
+      name: "AI Specialist 1",
+      designation: "AI Engineer",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "ai1@example.com",
+      },
+    },
+    {
+      imageSrc: "/path/to/image4.jpg",
+      name: "AI Specialist 2",
+      designation: "ML Engineer",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "ai2@example.com",
+      },
+    },
+  ],
+  "Web Development & Maintenance Team": [
+    {
+      imageSrc: "/path/to/image5.jpg",
+      name: "Web Dev 1",
+      designation: "Frontend Developer",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "webdev1@example.com",
+      },
+    },
+    {
+      imageSrc: "/path/to/image6.jpg",
+      name: "Web Dev 2",
+      designation: "Backend Developer",
+      links: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+        instagram: "https://instagram.com",
+        gmail: "webdev2@example.com",
+      },
+    },
+  ],
+};
 
-            <div className="flex flex-wrap justify-between mx-2 mb-6">
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-
-
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-            </div>
-
-
-
-
-            <div className="flex text-4xl font-semibold items-center justify-center">AI / ML Team</div>
-            <div className="mt-6"><p className="flex text-lg font-medium items-center justify-center text-gray-500 text-center">"Our leadership team combines experience, passion, and fresh ideas to inspire, innovate, and drive our mission forward. <br />
-                Meet the amazing people behind our journey!"</p></div>
-
-            <div className="flex flex-wrap justify-between mx-2 mb-6">
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-
-
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-            </div>
-
-            <div className="flex text-4xl font-semibold items-center justify-center">Web Development & Maintenance Team</div>
-            <div className="mt-6"><p className="flex text-lg font-medium items-center justify-center text-gray-500 text-center">"Our leadership team combines experience, passion, and fresh ideas to inspire, innovate, and drive our mission forward. <br />
-                Meet the amazing people behind our journey!"</p></div>
-
-            {/* <div className="flex flex-wrap justify-between mx-2 mb-6">
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-
-
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-                <Card className="p-2 rounded-3xl w-1/4 mb-6">
-                    <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                    <div className="text-center mt-4">Team Member Name</div>
-                    <div className="text-center mt-4">Team Member Designation</div>
-                    <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-blue-600 hover:bg-blue-500"
-                        >
-                            <FaLinkedin size={"20"} />
-
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaGithub />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <FaInstagram />
-                        </Button>
-                        <Button
-                            size={"icon"}
-                            className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                        >
-                            <SiGmail />
-                        </Button>
-                    </div>
-                </Card>
-            </div> */}
-
-            <div className="flex flex-wrap justify-between mx-16 mb-6 gap-2">
-                <div className="w-1/4">
-                    <Card className="p-2 rounded-3xl mb-6">
-                        <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                        <div className="text-center mt-4">Team Member Name</div>
-                        <div className="text-center mt-4">Team Member Designation</div>
-                        <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaLinkedin size={"20"} />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaGithub />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaInstagram />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <SiGmail />
-                            </Button>
-                        </div>
-                    </Card>
-                </div>
-                <div className="w-1/4">
-                    <Card className="p-2 rounded-3xl mb-6">
-                        <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                        <div className="text-center mt-4">Team Member Name</div>
-                        <div className="text-center mt-4">Team Member Designation</div>
-                        <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaLinkedin size={"20"} />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaGithub />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaInstagram />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <SiGmail />
-                            </Button>
-                        </div>
-                    </Card>
-                </div>
-                <div className="w-1/4">
-                    <Card className="p-2 rounded-3xl mb-6">
-                        <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                        <div className="text-center mt-4">Team Member Name</div>
-                        <div className="text-center mt-4">Team Member Designation</div>
-                        <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaLinkedin size={"20"} />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaGithub />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaInstagram />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <SiGmail />
-                            </Button>
-                        </div>
-                    </Card>
-                </div>
-                <div className="w-1/4">
-                    <Card className="p-2 rounded-3xl mb-6">
-                        <Image src="/path/to/image.jpg" alt="Team Member" width={150} height={150} className="mx-auto" />
-                        <div className="text-center mt-4">Team Member Name</div>
-                        <div className="text-center mt-4">Team Member Designation</div>
-                        <div className="flex gap-3 text-xl content-center justify-center mt-4">
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaLinkedin size={"20"} />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaGithub />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <FaInstagram />
-                            </Button>
-                            <Button
-                                size={"icon"}
-                                className="rounded-full bg-lavender-800 hover:bg-lavender-700"
-                            >
-                                <SiGmail />
-                            </Button>
-                        </div>
-                    </Card>
-                </div>
-            </div>
-
-        </div>
-    )
+function TeamSection({ title, description, members }) {
+  return (
+    <div className="mb-10">
+      <div className="flex text-4xl font-semibold items-center justify-center">
+        {title}
+      </div>
+      <div className="mt-6">
+        <p className="flex text-lg font-medium items-center justify-center text-gray-500 text-center">
+          {description}
+        </p>
+      </div>
+      <div className="flex flex-wrap mx-2 mb-6 gap-5 justify-center">
+        {members.map((member, index) => (
+          <TeamMemberCard
+            key={index}
+            imageSrc={member.imageSrc}
+            name={member.name}
+            designation={member.designation}
+            links={member.links}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
+
+export default function People() {
+  return (
+    <div className="mt-24">
+      {Object.entries(teamData).map(([teamName, members], index) => (
+        <TeamSection
+          key={index}
+          title={teamName}
+          description={`"Our ${teamName.toLowerCase()} combines experience, passion, and fresh ideas to inspire, innovate, and drive our mission forward. Meet the amazing people behind our journey!"`}
+          members={members}
+        />
+      ))}
+    </div>
+  );
+}
+
