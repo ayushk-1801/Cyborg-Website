@@ -3,6 +3,7 @@ import Image from "next/image";
 import NumberTicker from "@/components/ui/number-ticker";
 import Link from "next/link";
 import Events from "@/components/EventsCard";
+import Alumni from "@/components/AlumniCard";
 
 export default function Home() {
   return (
@@ -53,10 +54,31 @@ export default function Home() {
             <div className="hover:underline">View All</div>
           </Link>
         </div>
-        <div className="flex gap-14 mt-4">
-          <Events />
-          <Events />
-          <Events />
+        <div className="flex gap-14 mt-10">
+          <Events
+            EventName="Event 1"
+            EventDate="26"
+            EventMonth="January"
+            EventYear="2024"
+            EventImage="/event1.jpg"
+            variant="lavender"
+          />
+          <Events
+            EventName="Event 2"
+            EventDate="26"
+            EventMonth="January"
+            EventYear="2024"
+            EventImage="/event2.jpg"
+            variant="teal"
+          />
+          <Events
+            EventName="Event 3"
+            EventDate="26"
+            EventMonth="January"
+            EventYear="2024"
+            EventImage="/event3.jpg"
+            variant="yellow"
+          />
         </div>
       </Card>
       <Card className="my-10 p-16">
@@ -70,6 +92,29 @@ export default function Home() {
       <Card className="my-10 p-16">
         <div className="flex w-full justify-center">
           <div className="font-bold text-4xl">Alumni Says</div>
+        </div>
+        <div className="flex gap-14 mt-10 w-full">
+          <Alumni
+            name="Alumni 1"
+            designation="Designation 1"
+            says="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            image="/alumni1.jpg"
+            variant="tomato"
+          />
+          <Alumni
+            name="Alumni 1"
+            designation="Designation 1"
+            says="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            image="/alumni1.jpg"
+            variant="teal"
+          />
+          <Alumni
+            name="Alumni 1"
+            designation="Designation 1"
+            says="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            image="/alumni1.jpg"
+            variant="yellow"
+          />
         </div>
       </Card>
     </div>

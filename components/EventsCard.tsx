@@ -1,26 +1,66 @@
 import Image from "next/image";
 
-export default function Event() {
+interface EventProps {
+  EventName: string;
+  EventDate: string;
+  EventMonth: string;
+  EventYear: string;
+  EventImage: string;
+  variant: "lavender" | "teal" | "yellow";
+}
+
+export default function Event({
+  EventName,
+  EventDate,
+  EventMonth,
+  EventYear,
+  EventImage,
+  variant,
+}: EventProps) {
+  const backgroundClasses = {
+    lavender: {
+      eventName: "bg-lavender-800",
+      eventDate: "bg-lavender-900",
+      eventMonth: "bg-lavender-700",
+    },
+    teal: {
+      eventName: "bg-teal-700",
+      eventDate: "bg-teal-800",
+      eventMonth: "bg-teal-500",
+    },
+    yellow: {
+      eventName: "bg-yellow-600",
+      eventDate: "bg-yellow-800",
+      eventMonth: "bg-yellow-500",
+    },
+  };
+
   return (
-    <div className="w-full text-white transition-all hover:scale-105">
+    <div className="w-full text-white transition-all hover:scale-105 cursor-pointer">
       <Image
-        src="/home.svg"
-        alt="Home"
+        src={EventImage}
+        alt={EventName}
         width={0}
         height={500}
-        className="bg-gray-400 rounded-xl wfull"
+        className="bg-gray-400 rounded-t-xl w-full"
       />
-      <div className="bg-lavender-800 flex justify-center text-2xl p-2">
-        Event Name
+      <div
+        className={`${backgroundClasses[variant].eventName} flex justify-center text-2xl p-2 font-semibold`}
+      >
+        {EventName}
       </div>
 
       <div className="grid grid-cols-3 rounded-bl-xl rounded-br-xl overflow-hidden">
-        <div className="bg-lavender-900 text-center font-bold text-6xl h-full flex items-center justify-center">
-          26
+        <div
+          className={`${backgroundClasses[variant].eventDate} text-center font-bold text-6xl h-full flex items-center justify-center`}
+        >
+          {EventDate}
         </div>
-        <div className="col-span-2 text-center font-semibold text-4xl bg-lavender-700 p-2">
-          January <br />
-          2024
+        <div
+          className={`${backgroundClasses[variant].eventMonth} col-span-2 text-center font-semibold text-4xl p-2`}
+        >
+          {EventMonth} <br />
+          {EventYear}
         </div>
       </div>
     </div>
